@@ -1,0 +1,151 @@
+/* styles.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    width: auto; 
+    max-width: 1200px; 
+    margin: 20px auto; 
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    width: auto; 
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    display: none;
+    text-align: center;
+    border: 2px solid #3498db; /* Warna border stroke outline */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Mengurangi margin pada header */
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db; /* Warna border stroke outline */
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 15vw; /* Menggunakan vw untuk ukuran foto profil */
+    max-width: 200px;
+    max-height: 200px;
+    box-shadow: 0 0 10px #00ffff;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 4vw; /* Ukuran font responsif */
+    color: #fff;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 1.5vw; /* Ukuran font responsif */
+    color: #bbb;
+}
+
+header a {
+    color: #00ffff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1.5vw; /* Ukuran font responsif */
+}
+
+header a:hover {
+    color: #00ff00;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #3498db; /* Warna border stroke outline */
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+.skills-list li,
+.work-item ul li,
+.org-item ul li {
+    margin-bottom: 10px;
+    color: #ff7f00;
+    text-shadow: 0 0 5px #ff7f00, 0 0 10px #ff7f00, 0 0 15px #ff7f00;
+    font-size: 1.5vw; /* Ukuran font responsif untuk poin dan subpoin */
+}
+
+.navigation button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
+    transition: all 0.3s;
+    font-size: 1.5vw; /* Ukuran font responsif untuk tombol navigasi */
+}
+
+.navigation button:hover {
+    background-color: #00ffff;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; 
+    }
+
+    header h1 {
+        font-size: 6vw; 
+    }
+
+    header p,
+    header a {
+        font-size: 3vw; 
+
+    section h2 {
+        font-size: 7vw; 
+    }
+
+    .skills-list li,
+    .work-item ul li,
+    .org-item ul li {
+        font-size: 3vw; 
+    }
+
+    .navigation button {
+        font-size: 3vw; 
+    }
+}

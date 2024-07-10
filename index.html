@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrik Paulus - Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="page" id="page1">
+            <header>
+                <div class="profile-section">
+                    <img src="fotoprofile.png" alt="Patrik Paulus" class="profile-photo">
+                    <div class="profile-info">
+                        <h1>Patrik Paulus</h1>
+                        <p>Ambon Maluku 97232 | +62 821 9965 3954 | <a href="mailto:patrickpaulus1109@gmail.com">patrickpaulus1109@gmail.com</a></p>
+                        <p><a href="https://linkedin.com/in/patrickpaulus">LinkedIn</a> | <a href="https://instagram.com/patrick.0009">Instagram</a></p>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <div class="page" id="page2">
+            <section>
+                <h2><i data-feather="user" style="font-size: 5vw; color: #ff00ff;"></i> About Me</h2>
+                <p style="font-size: 2vw;">I am a highly motivated, goal-oriented individual with a strong interest in learning and a hard worker who is always up for a challenge with great enthusiasm. I also have a strong leadership spirit, good problem-solving skills with the ability to identify and implement efficient solutions. In addition, I have expertise in using MS Office software and Android Studio with a skilled level of expertise.</p>
+            </section>
+        </div>
+
+        <div class="page" id="page3">
+            <section>
+                <h2><i data-feather="book" style="font-size: 1vw; color: #ff00ff;"></i> Education</h2>
+                <div class="education-item">
+                    <h3 style="font-size: 2vw;">Pattimura University (September 2020 - present)</h3>
+                    <p style="font-size: 1.7vw;">S1 Industrial Engineering – GPA: 3.30</p>
+                    <p style="font-size: 1.7vw;">Mastering project management, product development, human resource management, and information technology.</p>
+                </div>
+                <div class="education-item">
+                    <h3 style="font-size: 2vw;">SMK Negeri 3 Ambon (July 2016 – June 2018)</h3>
+                    <p style="font-size: 1.7vw;">Electrical Power Installation Engineering – Mean: 80</p>
+                    <p style="font-size: 1.7vw;">Mastering Programmable Logic Controller (PLC) and assembling a semi-automatic voltage switching system.</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="page" id="page4">
+            <section>
+                <h2><i data-feather="code" style="font-size: 3vw; color: #ff00ff;"></i> Skills and Abilities</h2>
+                <ul class="skills-list">
+                    <li>Microsoft Office (Excel, Word, PowerPoint)</li>
+                    <li>Basic Programming (C++, HTML, Kotlin, XML) - Certified Activities</li>
+                    <li>Project Management - Certified Activities</li>
+                    <li>Android Development - Certified Activities</li>
+                    <li>Search Engine Optimization (SEO) - Certified Activities</li>
+                    <li>Digital Marketing - Certified Activities</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="page" id="page5">
+            <section>
+                <h2><i data-feather="briefcase" style="font-size: 3vw; color: #ff00ff;"></i> Work Experience</h2>
+                <div class="work-item">
+                    <h3 style="font-size: 2vw;">Android-based Village Digitalisation (June 2023 - November 2023)</h3>
+                    <p style="font-size: 2vw;">Role: Application Developer</p>
+                    <ul>
+                        <li>Develop Android apps according to village needs</li>
+                        <li>Test for performance and freedom from bugs</li>
+                        <li>Ensure compatibility across devices</li>
+                        <li>Connect with village data sources and web services</li>
+                        <li>Enforce data security through encryption, user authentication, and permission management</li>
+                    </ul>
+                </div>
+                <div class="work-item">
+                    <h3 style="font-size: 2vw;">Final Pit Stop Project Makro by Infinite Learning (November 2023 – December 2023)</h3>
+                    <p style="font-size: 1.7vw;">Role: Hacker</p>
+                    <ul>
+                        <li>Health app security checks including system penetration</li>
+                        <li>Source code audit, risk identification, and malware analysis</li>
+                        <li>Identify and address vulnerabilities and protect sensitive user data from malicious attacks</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="page" id="page6">
+            <section>
+                <h2><i data-feather="users" style="font-size: 3vw; color: #ff00ff;"></i> Organisational Experience</h2>
+                <div class="org-item">
+                    <h3 style="font-size: 2vw;">Industrial Engineering Student Association</h3>
+                    <p style="font-size: 1.7vw;">Head of the Student Association (May 2023 – Present)</p>
+                    <ul>
+                        <li>Leadership, critical thinking, and teamwork</li>
+                    </ul>
+                </div>
+            </section>
+            
+        </div>
+        <div class="page" id="page7">
+            <section>
+                <h2>Terimakasih</h2>
+                <p>Terimakasih telah melihat resume saya. Silakan hubungi saya melalui email atau LinkedIn jika Anda memiliki pertanyaan atau kesempatan yang ingin dibahas lebih lanjut.</p>
+            </section>
+        </div>
+
+        <div class="navigation">
+            <button id="prevBtn">Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+
+        let currentPage = 1;
+        const totalPages = document.querySelectorAll('.page').length;
+
+        function showPage(page) {
+            document.querySelectorAll('.page').forEach((pageElement, index) => {
+                pageElement.style.display = (index === page - 1) ? 'block' : 'none';
+            });
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        });
+
+        showPage(currentPage);
+    </script>
+</body>
+</html>
